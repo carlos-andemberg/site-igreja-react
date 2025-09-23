@@ -38,9 +38,59 @@ function Home() {
             <section className="info-section">
                 <div className="info-card">
                     <h3>Nossos Cultos</h3>
-                    <p><strong>Terça-feira: Culto de Ensino</strong><br />19h30</p>
-                    <p><strong>Quinta-feira: Culta da Vitória</strong><br />19h30</p>
-                    <p><strong>Domingo: Culto da Família</strong><br />19h00</p>
+                    <div className="schedule-list">
+
+                        <div className="schedule-day">
+                            <h4>Terça-feira</h4>
+                            <ul className="service-list">
+                                <li className="service-item">
+                                    <span className="service-name">Manhã: Consagração</span>
+                                    <span className="service-time">07h30 - 09h00</span>
+                                </li>
+                                <li className="service-item">
+                                    <span className="service-name">Noite: Culto de Ensino</span>
+                                    <span className="service-time">19h30</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="schedule-day">
+                            <h4>Quinta-feira</h4>
+                            <ul className="service-list">
+                                <li className="service-item">
+                                    <span className="service-name">Manhã: Consagração</span>
+                                    <span className="service-time">07h30 - 09h00</span>
+                                </li>
+                                <li className="service-item">
+                                    <span className="service-name">Noite: Culto da Vitória</span>
+                                    <span className="service-time">19h30</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="schedule-day">
+                            <h4>Domingo</h4>
+                            <ul className="service-list">
+                                <li className="service-item">
+                                    <span className="service-name">Manhã: Consagração</span>
+                                    <span className="service-time">07h30 - 08h30</span>
+                                </li>
+                                <li className="service-item">
+                                    <span className="service-name">Café com o Pastor</span>
+                                    <span className="service-time">08h30 - 09h00</span>
+                                </li>
+                                <li className="service-item">
+                                    <span className="service-name">Escola Bíblica Dominical</span>
+                                    <span className="service-time">09h00</span>
+                                </li>
+                                <li className="service-item">
+                                    <span className="service-name">Noite: Culto da Família</span>
+                                    <span className="service-time">19h00</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div className="info-card">
