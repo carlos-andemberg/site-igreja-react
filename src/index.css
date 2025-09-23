@@ -1,0 +1,23 @@
+/* src/index.css */
+:root {
+  /* Paleta de Cores Principal */
+  --cor-azul-principal: #0274BA;
+  --cor-indigo-escuro: #3E4093;
+  --cor-amarelo-destaque: #FDCB2B;
+  --cor-branco: #FFFFFF;
+  --cor-fundo-site: #f4f4f9;
+  /* Cores Neutras para Texto e Fundo */
+  --cor-texto: #333333; /* Um cinza escuro para textos */
+  --cor-fundo: #FDFDFD; /* Um branco levemente acinzentado */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--cor-fundo-site);
+  color: var(--cor-texto);
+}

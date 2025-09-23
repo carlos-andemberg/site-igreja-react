@@ -1,0 +1,9 @@
+/* src/App.css */
+.content-container {
+  max-width: 1100px; /* Define uma largura máxima para o conteúdo */
+  margin: 2rem auto; /* Centraliza o container na tela e dá um espaço em cima/baixo */
+  padding: 2rem;
+  background-color: var(--cor-branco);
+  border-radius: 8px; /* Adiciona uma borda arredondada sutil */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

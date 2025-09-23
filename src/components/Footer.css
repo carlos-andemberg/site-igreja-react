@@ -1,0 +1,8 @@
+/* src/components/Footer.css */
+.site-footer {
+  background-color: var(--cor-indigo-escuro); /* <<-- Usando o índigo da paleta! */
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
