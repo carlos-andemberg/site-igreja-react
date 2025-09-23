@@ -38,8 +38,9 @@ function Home() {
             <section className="info-section">
                 <div className="info-card">
                     <h3>Nossos Cultos</h3>
-                    <p><strong>Domingo:</strong><br />10h e 18h</p>
-                    <p><strong>Quarta-feira:</strong><br />20h</p>
+                    <p><strong>Terça-feira: Culto de Ensino</strong><br />19h30</p>
+                    <p><strong>Quinta-feira: Culta da Vitória</strong><br />19h30</p>
+                    <p><strong>Domingo: Culto da Família</strong><br />19h00</p>
                 </div>
 
                 <div className="info-card">
