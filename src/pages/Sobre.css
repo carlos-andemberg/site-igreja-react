@@ -44,14 +44,14 @@
 }
 
 /* Este será o círculo cinza onde a foto do pastor entrará no futuro */
-.pastor-photo-placeholder {
+.pastor-photo {
   width: 150px;
   height: 150px;
-  background-color: #e0e0e0;
-  border-radius: 50%; /* Deixa a "foto" redonda */
-  margin: 0 auto 1rem; /* Centraliza o círculo */
+  border-radius: 50%; /* Deixa a foto redonda */
+  margin: 0 auto 1rem;
   border: 4px solid var(--cor-branco);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
 }
 
 .intro-section {

@@ -1,6 +1,10 @@
 // src/pages/Sobre.jsx
 import './Sobre.css';
 import logoSobreImage from '../assets/logo-sobre.jpg';
+import fotoPastorDilmo from '../assets/pastor-dilmo.jpg';
+import fotoPastoraMarisa from '../assets/pastora-marisa.jpg';
+import fotoPastorNilson from '../assets/pastor-nilson.jpg';
+import fotoMissionariaLeila from '../assets/missionaria-leila.jpg';
 
 function Sobre() {
     return (
@@ -44,27 +48,28 @@ function Sobre() {
                 <div className="pastors-grid">
 
                     <div className="pastor-card">
-                        <div className="pastor-photo-placeholder"></div>
+                        {/* Substituímos a div por uma tag de imagem */}
+                        <img src={fotoPastorDilmo} alt="Pastor Dilmo dos Santos" className="pastor-photo" />
                         <h3>Pastor Dilmo dos Santos</h3>
                         <p>Presidente</p>
                     </div>
 
                     <div className="pastor-card">
-                        <div className="pastor-photo-placeholder"></div>
+                        <img src={fotoPastoraMarisa} alt="Pastora Marisa Galvão" className="pastor-photo" />
                         <h3>Pastora Marisa Galvão</h3>
-                        {/* Adicione um parágrafo <p> com o título dela se tiver */}
+                        {/* Adicione o título dela aqui, se houver */}
                     </div>
 
                     <div className="pastor-card">
-                        <div className="pastor-photo-placeholder"></div>
+                        <img src={fotoPastorNilson} alt="Pastor Nilson Barbosa" className="pastor-photo" />
                         <h3>Pastor Nilson Barbosa</h3>
                         <p>Presidente Executivo</p>
                     </div>
 
                     <div className="pastor-card">
-                        <div className="pastor-photo-placeholder"></div>
+                        <img src={fotoMissionariaLeila} alt="Missionária Leila Conceição" className="pastor-photo" />
                         <h3>Missionária Leila Conceição</h3>
-                        {/* Adicione um parágrafo <p> com o título dela se tiver */}
+                        {/* Adicione o título dela aqui, se houver */}
                     </div>
 
                 </div>
