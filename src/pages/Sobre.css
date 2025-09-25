@@ -53,3 +53,41 @@
   border: 4px solid var(--cor-branco);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.intro-section {
+  display: flex; /* Cria o layout de colunas */
+  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  gap: 2rem; /* Espaço entre a imagem e o texto */
+  margin-bottom: 3rem;
+}
+
+.intro-image {
+  flex: 1; /* Define que a imagem ocupará uma fração do espaço */
+  max-width: 500px; /* Limita a largura máxima da imagem */
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.intro-text {
+  flex: 1.5; /* Define que o texto ocupará uma fração e meia, tendo mais espaço */
+  line-height: 1.8;
+}
+
+.intro-text h2 {
+    color: var(--cor-azul-principal);
+    border-bottom: 2px solid var(--cor-amarelo-destaque);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* Regra para telas de celular */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column; /* Coloca a imagem em cima do texto */
+  }
+}

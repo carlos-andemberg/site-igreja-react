@@ -1,25 +1,114 @@
 /* src/components/Header.css */
-.site-header {
+header {
+  background-color: var(--cor-branco);
+  padding: 0 1.5rem; /* Um pouco menos de padding lateral para mobile */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--cor-branco);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
 }
 
-.logo {
-  height: 60px; /* Ajuste a altura conforme necessário */
+/* --- Layout de 3 Colunas --- */
+.header-left, .header-right {
+  flex: 1;
 }
 
-.site-header nav a {
-  margin-left: 1.5rem;
+.header-center {
+  text-align: center;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Alinha o menu e o botão */
+}
+
+.logo-principal {
+  height: 50px;
+}
+
+.logo-central {
+  height: 65px;
+  border-radius: 8px;
+}
+
+header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav a {
+  color: var(--cor-indigo-escuro);
   text-decoration: none;
-  color: var(--cor-indigo-escuro); /* Usando nossa variável de cor! */
   font-weight: bold;
-  font-size: 1.1rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
 }
 
-.site-header nav a:hover {
+header nav a:hover,
+header nav a.active {
   color: var(--cor-azul-principal);
+  border-bottom-color: var(--cor-amarelo-destaque);
+}
+
+.hamburger-button {
+  display: none;
+}
+
+
+/* --- Estilos para o Menu Mobile (telas menores que 992px) --- */
+@media (max-width: 992px) {
+  /* NÃO escondemos mais a logo central */
+  /* .header-center { display: none; } */
+
+  /* Ajustamos o tamanho das logos para caberem melhor */
+  .logo-principal {
+    height: 40px;
+  }
+  .logo-central {
+    height: 50px;
+  }
+
+  /* Escondemos a navegação do desktop */
+  header nav {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--cor-indigo-escuro);
+    font-size: 2.5rem; /* Um pouco maior para facilitar o toque */
+    cursor: pointer;
+    z-index: 1001; /* Garante que o botão fique acima do menu */
+  }
+
+  /* AQUI A CORREÇÃO PRINCIPAL DO MENU SOBREPONDO */
+  /* O menu só é exibido quando a classe .nav-active é aplicada */
+  nav.nav-active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: rgba(255, 255, 255, 0.98); /* Fundo branco levemente transparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque (moderno) */
+    padding: 2rem;
+    gap: 1.5rem;
+    z-index: 1000;
+  }
+
+  nav.nav-active a {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+  }
 }

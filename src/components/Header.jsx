@@ -1,21 +1,42 @@
 // src/components/Header.jsx
-import { Link } from 'react-router-dom';
-import logo from '../assets/logo.svg'; // 1. Importe a logo
-import './Header.css'; // Vamos criar este arquivo para o estilo
+import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import './Header.css';
+import logoPrincipal from '../assets/logo.svg';
+import logoCentral from '../assets/logo-central.jpg';
 
 function Header() {
-  return (
-    <header className="site-header">
-      {/* 2. Use a logo em uma tag <img> */}
-      <Link to="/">
-        <img src={logo} alt="Logo da Igreja" className="logo" />
-      </Link>
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-      <nav>
-        <Link to="/">Início</Link>
-        <Link to="/sobre">Sobre Nós</Link>
-        <Link to="/contato">Contato</Link>
-      </nav>
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  return (
+    <header>
+      <div className="header-left">
+        <Link to="/" onClick={closeMobileMenu}>
+          <img src={logoPrincipal} alt="Logo da Igreja" className="logo-principal" />
+        </Link>
+      </div>
+
+      <div className="header-center">
+        <Link to="/" onClick={closeMobileMenu}>
+          <img src={logoCentral} alt="Logo AD Brás Piracicaba Tabuleiro" className="logo-central" />
+        </Link>
+      </div>
+
+      {/* Agrupamos a navegação e o botão */}
+      <div className="header-right">
+        <nav className={isMobileMenuOpen ? 'nav-active' : ''}>
+          <NavLink to="/" onClick={closeMobileMenu}>Início</NavLink>
+          <NavLink to="/sobre" onClick={closeMobileMenu}>Sobre</NavLink>
+          <NavLink to="/contato" onClick={closeMobileMenu}>Contato</NavLink>
+        </nav>
+        <button className="hamburger-button" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          ☰
+        </button>
+      </div>
     </header>
   );
 }
