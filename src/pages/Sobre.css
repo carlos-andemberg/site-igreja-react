@@ -51,7 +51,10 @@
   margin: 0 auto 1rem;
   border: 4px solid var(--cor-branco);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  object-fit: cover; /* Garante que a foto preencha o círculo sem distorcer */
+  /* Linhas mais importantes para o ajuste */
+  object-fit: cover;           /* Garante que a imagem preencha o círculo sem distorcer */
+  object-position: center;     /* Garante que o corte seja feito a partir do centro */
+  background-color: #e0e0e0; /* Cor de fundo caso a imagem demore a carregar */
 }
 
 .intro-section {
