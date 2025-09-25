@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import logoPrincipal from '../assets/logo.svg';
-import logoCentral from '../assets/logo-central.jpg';
+import logoCentral from '../assets/logo-central.png';
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
