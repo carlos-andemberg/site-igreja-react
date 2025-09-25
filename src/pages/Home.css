@@ -90,6 +90,8 @@
     flex-grow: 1;
     /* Permite que os cartões cresçam se houver espaço */
     max-width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .info-card h3 {
@@ -223,6 +225,40 @@
     color: #555;
 }
 
+.pix-info {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para a chave */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pix-info span {
+  font-size: 1.1rem;
+}
+
+.copy-button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--cor-amarelo-destaque);
+  color: var(--cor-indigo-escuro);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.copy-button:hover {
+  transform: scale(1.02);
+}
+
 /* Regra para telas de celular */
 @media (max-width: 768px) {
     .event-highlight {
@@ -236,4 +272,25 @@
         /* Centraliza tudo no celular */
         justify-content: center;
     }
+}
+/* --- Regra para o mapa no Desktop --- */
+
+/* 1. Por padrão (em telas pequenas/mobile), o mapa fica escondido. */
+.desktop-map-container {
+  display: none;
+  flex-grow: 1;
+}
+
+.desktop-map-container iframe {
+  width: 100%;
+  height: 100%; /* Altura do mapa no card */
+  border-radius: 8px;
+}
+
+/* 2. Quando a tela for GRANDE (min-width: 992px), o mapa aparece. */
+@media (min-width: 864px) {
+  .desktop-map-container {
+    display: block; /* Faz o mapa aparecer */
+    margin-top: 1.5rem;
+  }
 }
