@@ -73,8 +73,18 @@
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    padding: 2rem 0;
+    /* padding: 2rem 0; */
     /* Adicionamos um respiro para separar da faixa de evento */
+    /* Sobrepor de hero */
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    margin-top: 2rem;
+  }
 }
 
 /* Estilo individual de cada cartão */
@@ -122,7 +132,7 @@
     /* Escurece ao passar o mouse */
 }
 
-.event-highlight {
+/* .event-highlight {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -132,32 +142,25 @@
 
 .event-image-container {
     flex: 1;
-    /* Ocupa uma parte do espaço */
     max-width: 400px;
-    /* Limita a largura máxima da imagem */
 }
 
 .event-image-container img {
     width: 100%;
     border-radius: 8px;
-    /* Borda arredondada na imagem */
     display: block;
-    /* Remove espaços extras embaixo da imagem */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .event-content {
     flex: 1.5;
-    /* Ocupa uma parte e meia, dando mais espaço para o texto */
     text-align: left;
-    /* Alinha o texto à esquerda */
 }
 
 .event-content h2 {
     margin-top: 0;
     font-size: 2rem;
     color: var(--cor-indigo-escuro);
-    /* Trocamos a cor para ter contraste no fundo claro */
 }
 
 .event-content p {
@@ -167,13 +170,12 @@
 .event-details {
     display: flex;
     justify-content: flex-start;
-    /* Alinha os detalhes à esquerda */
     gap: 2rem;
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--cor-azul-principal);
-}
+} */
 
 /* Container para a lista de dias */
 .schedule-list {
@@ -226,71 +228,72 @@
 }
 
 .pix-info {
-  background-color: #f0f0f0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 0.75rem;
-  margin: 1rem 0;
-  font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada para a chave */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    font-family: 'Courier New', Courier, monospace;
+    /* Fonte monoespaçada para a chave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .pix-info span {
-  font-size: 1.1rem;
+    font-size: 1.1rem;
 }
 
 .copy-button {
-  width: 100%;
-  padding: 0.8rem;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--cor-amarelo-destaque);
-  color: var(--cor-indigo-escuro);
-  transition: background-color 0.2s, transform 0.2s;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-amarelo-destaque);
+    color: var(--cor-indigo-escuro);
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 .copy-button:hover {
-  transform: scale(1.02);
+    transform: scale(1.02);
 }
 
 /* Regra para telas de celular */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .event-highlight {
         flex-direction: column;
-        /* Coloca a imagem em cima do texto */
     }
 
     .event-content,
     .event-details {
         text-align: center;
-        /* Centraliza tudo no celular */
         justify-content: center;
     }
-}
+} */
 /* --- Regra para o mapa no Desktop --- */
 
 /* 1. Por padrão (em telas pequenas/mobile), o mapa fica escondido. */
 .desktop-map-container {
-  display: none;
-  flex-grow: 1;
+    display: none;
+    flex-grow: 1;
 }
 
 .desktop-map-container iframe {
-  width: 100%;
-  height: 100%; /* Altura do mapa no card */
-  border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    /* Altura do mapa no card */
+    border-radius: 8px;
 }
 
 /* 2. Quando a tela for GRANDE (min-width: 992px), o mapa aparece. */
 @media (min-width: 864px) {
-  .desktop-map-container {
-    display: block; /* Faz o mapa aparecer */
-    margin-top: 1.5rem;
-  }
+    .desktop-map-container {
+        display: block;
+        /* Faz o mapa aparecer */
+        margin-top: 1.5rem;
+    }
 }

@@ -35,7 +35,7 @@ function Home() {
                 </div>
             </section>
 
-            {/* VAMOS ADICIONAR A NOVA SEÇÃO AQUI */}
+            {/* VAMOS ADICIONAR A NOVA SEÇÃO AQUI
             <section className="event-highlight">
                 <div className="event-image-container">
                     <img src={eventFlyer} alt="Flyer da Festividade do Templo" />
@@ -49,7 +49,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            {/* FIM DA NOVA SEÇÃO */}
+            FIM DA NOVA SEÇÃO */}
 
             {/* Aqui podemos adicionar mais seções no futuro */}
 

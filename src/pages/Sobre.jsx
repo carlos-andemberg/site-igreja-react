@@ -29,7 +29,7 @@ function Sobre() {
                 </div>
             </section>
 
-            {/* O RESTANTE DO CONTEÚDO PERMANECE IGUAL */}
+            {/* O RESTANTE DO CONTEÚDO PERMANECE IGUAL
             <section className="about-content">
                 <h2>Missão, Visão e Valores</h2>
                 <p>
@@ -41,7 +41,7 @@ function Sobre() {
                 <p>
                     <strong>Valores:</strong> Os pilares da igreja. Ex: "Adoração, Comunhão, Serviço..."
                 </p>
-            </section>
+            </section> */}
 
             <section className="pastors-section">
                 <h2>Nossa Liderança</h2>

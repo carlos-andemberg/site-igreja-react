@@ -13,8 +13,8 @@
   margin: 0;
 }
 
-.about-content {
-  line-height: 1.8; /* Aumenta o espaçamento entre as linhas para melhor leitura */
+/* .about-content {
+  line-height: 1.8;
   margin-bottom: 3rem;
 }
 
@@ -23,7 +23,7 @@
   border-bottom: 2px solid var(--cor-amarelo-destaque);
   padding-bottom: 0.5rem;
   margin-top: 2rem;
-}
+} */
 
 .pastors-section h2 {
   text-align: center;
