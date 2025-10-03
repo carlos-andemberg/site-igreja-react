@@ -1,16 +1,41 @@
 /* src/pages/Sobre.css */
 
 .about-header {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: var(--cor-fundo-site); /* Um fundo suave para o cabeçalho da página */
+  display: flex; /* ATIVA O FLEXBOX */
+  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  gap: 2rem; /* Espaço entre a imagem e o texto */
+  background-color: var(--cor-fundo-site);
+  padding: 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
 }
 
-.about-header h1 {
+/* Ajustando a imagem que está dentro do header */
+.about-header .intro-image {
+  flex: 1; /* Uma fração do espaço */
+  max-width: 400px;
+}
+
+/* Adicionando a regra para o container do texto */
+.about-header-text {
+  flex: 1.5; /* Uma fração e meia (mais espaço para o texto) */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.about-header-text h1 {
   color: var(--cor-indigo-escuro);
   margin: 0;
+}
+
+/* Regra para telas de celular */
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column; /* Coloca a imagem em cima do texto */
+    text-align: center; /* Centraliza tudo no mobile */
+  }
+  .about-header-text {
+    text-align: center; /* Centraliza o texto no mobile */
+  }
 }
 
 /* .about-content {
@@ -93,4 +118,30 @@
   .intro-section {
     flex-direction: column; /* Coloca a imagem em cima do texto */
   }
+}
+
+.board-members {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee; /* Adiciona uma linha sutil de separação */
+}
+
+.board-members h4 {
+  color: var(--cor-azul-principal);
+  margin-bottom: 0.5rem;
+}
+
+.board-members ul {
+  margin-left: 24px;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  color: #707070;
+}
+.board-members ul strong{
+  color: #505050 !important;
+}
+
+.board-members li {
+  padding: 0.25rem 0;
 }
