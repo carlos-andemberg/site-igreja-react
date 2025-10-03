@@ -208,12 +208,45 @@
     display: flex;
     /* ATIVA A MÁGICA! */
     justify-content: space-between;
+    gap: 10px;
     /* Alinha o nome e o horário na mesma linha */
     padding: 0.75rem 0.25rem;
     border-bottom: 1px solid #eee;
     /* Linha sutil de separação */
 }
 
+@media (max-width: 424px) {
+    .service-name{
+        font-size: 14px;
+    }
+    .service-time{
+        font-size: 14px;
+    }
+}
+@media (max-width: 392px) {
+    .service-name{
+        font-size: 12px;
+    }
+    .service-time{
+        font-size: 12px;
+    }
+}
+@media (max-width: 360px) {
+    .service-name{
+        font-size: 10px;
+    }
+    .service-time{
+        font-size: 10px;
+    }
+}
+@media (max-width: 328px) {
+    .service-name{
+        font-size: 8px;
+    }
+    .service-time{
+        font-size: 8px;
+    }
+}
 /* Remove a linha do último item de cada dia */
 .service-item:last-child {
     border-bottom: none;
@@ -221,10 +254,12 @@
 
 .service-name {
     font-weight: 500;
+    color: #505050;
+    margin-left: 24px;
 }
 
 .service-time {
-    color: #555;
+    color: #707070;
 }
 
 .pix-info {
