@@ -127,6 +127,7 @@
 }
 
 .board-members h4 {
+  font-size: 18px;
   color: var(--cor-azul-principal);
   margin-bottom: 0.5rem;
 }
