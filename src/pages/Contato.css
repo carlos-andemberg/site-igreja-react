@@ -20,8 +20,14 @@
   margin-top: 0;
 }
 
+.contact-info p strong{
+  color: #505050 !important;
+}
+
 .contact-info p {
   line-height: 1.8;
+  color: #707070;
+  margin-left: 24px;
 }
 
 .contact-info a {
