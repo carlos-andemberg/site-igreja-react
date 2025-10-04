@@ -1,25 +1,23 @@
 /* src/pages/Sobre.css */
 
 .about-header {
-  display: flex; /* ATIVA O FLEXBOX */
-  align-items: center; /* Alinha verticalmente a imagem e o texto */
-  gap: 2rem; /* Espaço entre a imagem e o texto */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   background-color: var(--cor-fundo-site);
   padding: 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
 }
 
-/* Ajustando a imagem que está dentro do header */
 .about-header .intro-image {
-  flex: 1; /* Uma fração do espaço */
+  flex: 1;
   max-width: 400px;
 }
 
-/* Adicionando a regra para o container do texto */
 .about-header-text {
-  flex: 1.5; /* Uma fração e meia (mais espaço para o texto) */
-  text-align: left; /* Alinha o texto à esquerda */
+  flex: 1.5;
+  text-align: left;
 }
 
 .about-header-text h1 {
@@ -27,28 +25,44 @@
   margin: 0;
 }
 
-/* Regra para telas de celular */
 @media (max-width: 768px) {
   .about-header {
-    flex-direction: column; /* Coloca a imagem em cima do texto */
-    text-align: center; /* Centraliza tudo no mobile */
+    flex-direction: column;
+    text-align: center;
   }
+
   .about-header-text {
-    text-align: center; /* Centraliza o texto no mobile */
+    text-align: center;
   }
 }
 
-/* .about-content {
-  line-height: 1.8;
-  margin-bottom: 3rem;
+/* --- ESTILOS PARA A NOVA SEÇÃO DE BOAS-VINDAS --- */
+.welcome-message-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  /* Centraliza o bloco e adiciona margem inferior */
+  padding: 0 1rem;
+  /* Garante respiro em telas menores */
 }
 
-.about-content h2 {
+.welcome-message-section h2 {
   color: var(--cor-azul-principal);
   border-bottom: 2px solid var(--cor-amarelo-destaque);
+  display: inline-block;
+  /* Faz a borda ficar apenas no tamanho do texto */
   padding-bottom: 0.5rem;
-  margin-top: 2rem;
-} */
+  margin-bottom: 1.5rem;
+}
+
+.welcome-message-section p {
+  line-height: 1.8;
+  color: #707070;
+  text-align: left; /* Alinha apenas os parágrafos à esquerda */
+}
+
+/* --- FIM DOS ESTILOS DA NOVA SEÇÃO --- */
+
 
 .pastors-section h2 {
   text-align: center;
@@ -65,33 +79,31 @@
 
 .pastor-card {
   text-align: center;
-  flex-basis: 280px; /* Largura base do cartão do pastor */
+  flex-basis: 280px;
 }
 
-/* Este será o círculo cinza onde a foto do pastor entrará no futuro */
 .pastor-photo {
   width: 150px;
   height: 150px;
-  border-radius: 50%; /* Deixa a foto redonda */
+  border-radius: 50%;
   margin: 0 auto 1rem;
   border: 4px solid var(--cor-branco);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  /* Linhas mais importantes para o ajuste */
-  object-fit: cover;           /* Garante que a imagem preencha o círculo sem distorcer */
-  object-position: center;     /* Garante que o corte seja feito a partir do centro */
-  background-color: #e0e0e0; /* Cor de fundo caso a imagem demore a carregar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  object-position: center;
+  background-color: #e0e0e0;
 }
 
 .intro-section {
-  display: flex; /* Cria o layout de colunas */
-  align-items: center; /* Alinha verticalmente a imagem e o texto */
-  gap: 2rem; /* Espaço entre a imagem e o texto */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
   margin-bottom: 3rem;
 }
 
 .intro-image {
-  flex: 1; /* Define que a imagem ocupará uma fração do espaço */
-  max-width: 500px; /* Limita a largura máxima da imagem */
+  flex: 1;
+  max-width: 500px;
 }
 
 .intro-image img {
@@ -102,28 +114,27 @@
 }
 
 .intro-text {
-  flex: 1.5; /* Define que o texto ocupará uma fração e meia, tendo mais espaço */
+  flex: 1.5;
   line-height: 1.8;
 }
 
 .intro-text h2 {
-    color: var(--cor-azul-principal);
-    border-bottom: 2px solid var(--cor-amarelo-destaque);
-    padding-bottom: 0.5rem;
-    margin-top: 0;
+  color: var(--cor-azul-principal);
+  border-bottom: 2px solid var(--cor-amarelo-destaque);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
 }
 
-/* Regra para telas de celular */
 @media (max-width: 768px) {
   .intro-section {
-    flex-direction: column; /* Coloca a imagem em cima do texto */
+    flex-direction: column;
   }
 }
 
 .board-members {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #eee; /* Adiciona uma linha sutil de separação */
+  border-top: 1px solid #eee;
 }
 
 .board-members h4 {
@@ -139,7 +150,8 @@
   margin-bottom: 1.5rem;
   color: #707070;
 }
-.board-members ul strong{
+
+.board-members ul strong {
   color: #505050 !important;
 }
 

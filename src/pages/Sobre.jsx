@@ -19,7 +19,18 @@ function Sobre() {
                 </div>
             </section>
 
-            {/* VAMOS CRIAR UMA NOVA SEÇÃO PARA O LAYOUT DE DUAS COLUNAS */}
+            {/* NOVA SEÇÃO DE BOAS-VINDAS PESSOAIS */}
+            <section className="welcome-message-section">
+                <h2>O Centro da Nossa Casa</h2>
+                <p>
+                    Antes de contarmos nossa história, queremos que você saiba quem é o centro de tudo o que fazemos: <strong>Jesus Cristo</strong>. É o Seu amor que nos inspira a ser uma comunidade que valoriza, acolhe e serve a todas as pessoas que chegam até nós.
+                </p>
+                <p>
+                    Nosso propósito é ser um lugar de esperança e acolhimento aqui no Tabuleiro, onde você e sua família possam se sentir em casa, crescer espiritualmente e encontrar uma comunidade que se importa de verdade. Que bom ter você aqui!
+                </p>
+            </section>
+
+            {/* SEÇÃO DA HISTÓRIA (PERMANECE IGUAL) */}
             <section className="intro-section">
                 <div className="intro-text">
                     <h2>HISTÓRIA DA IGREJA ADMP-TABULEIRO/AL</h2>
@@ -52,26 +63,11 @@ function Sobre() {
                 </div>
             </section>
 
-            {/* O RESTANTE DO CONTEÚDO PERMANECE IGUAL
-            <section className="about-content">
-                <h2>Missão, Visão e Valores</h2>
-                <p>
-                    <strong>Missão:</strong> Descreva aqui o propósito principal da igreja. Ex: "Levar a palavra de Deus a todos..."
-                </p>
-                <p>
-                    <strong>Visão:</strong> Onde a igreja se vê no futuro. Ex: "Ser uma igreja relevante para a comunidade..."
-                </p>
-                <p>
-                    <strong>Valores:</strong> Os pilares da igreja. Ex: "Adoração, Comunhão, Serviço..."
-                </p>
-            </section> */}
-
             <section className="pastors-section">
                 <h2>Nossa Liderança</h2>
                 <div className="pastors-grid">
 
                     <div className="pastor-card">
-                        {/* Substituímos a div por uma tag de imagem */}
                         <img src={fotoPastorDilmo} alt="Pastor Dilmo dos Santos" className="pastor-photo" />
                         <h3>Pastor Dilmo dos Santos</h3>
                         <p>Presidente</p>
@@ -80,7 +76,6 @@ function Sobre() {
                     <div className="pastor-card">
                         <img src={fotoPastoraMarisa} alt="Pastora Marisa Galvão" className="pastor-photo" />
                         <h3>Pastora Marisa Galvão</h3>
-                        {/* Adicione o título dela aqui, se houver */}
                     </div>
 
                     <div className="pastor-card">
@@ -92,7 +87,6 @@ function Sobre() {
                     <div className="pastor-card">
                         <img src={fotoMissionariaLeila} alt="Missionária Leila Conceição" className="pastor-photo" />
                         <h3>Missionária Leila Conceição</h3>
-                        {/* Adicione o título dela aqui, se houver */}
                     </div>
 
                 </div>

@@ -29,29 +29,8 @@ function Home() {
                 <div className="hero-content">
                     <h1>Bem-vindo à Nossa Casa</h1>
                     <p>Um lugar de fé, esperança e comunidade.</p>
-                    <Link to="/sobre" className="hero-button">
-                        Conheça nossa história
-                    </Link>
                 </div>
             </section>
-
-            {/* VAMOS ADICIONAR A NOVA SEÇÃO AQUI
-            <section className="event-highlight">
-                <div className="event-image-container">
-                    <img src={eventFlyer} alt="Flyer da Festividade do Templo" />
-                </div>
-                <div className="event-content">
-                    <h2>Próximo Evento: Festividade do Templo!</h2>
-                    <p>Venha celebrar conosco 6 anos de história. Um ano de coisas maiores!</p>
-                    <div className="event-details">
-                        <span>🗓️ 27 de Setembro</span>
-                        <span>⏰ às 19h00</span>
-                    </div>
-                </div>
-            </section>
-            FIM DA NOVA SEÇÃO */}
-
-            {/* Aqui podemos adicionar mais seções no futuro */}
 
             <section className="info-section">
                 <div className="info-card">
