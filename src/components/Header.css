@@ -1,0 +1,117 @@
+/* src/components/Header.css */
+header {
+  background-color: var(--cor-indigo-escuro);
+  padding: 0 1.5rem; /* Um pouco menos de padding lateral para mobile */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+/* --- Layout de 3 Colunas --- */
+.header-left, .header-right {
+  flex: 1;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Alinha o menu e o botão */
+}
+
+.logo-principal {
+  height: 65px;
+  padding: 2px;
+  border-radius: 2px;
+  background-color: var(--cor-branco);
+}
+
+.logo-central {
+  height: 65px;
+  border-radius: 8px;
+}
+
+header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+header nav a {
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: var(--cor-amarelo-destaque);
+  border-bottom-color: var(--cor-amarelo-destaque);
+}
+
+.hamburger-button {
+  display: none;
+}
+
+
+/* --- Estilos para o Menu Mobile (telas menores que 992px) --- */
+@media (max-width: 992px) {
+  /* NÃO escondemos mais a logo central */
+  /* .header-center { display: none; } */
+
+  /* Ajustamos o tamanho das logos para caberem melhor */
+  .logo-principal {
+    height: 50px;
+  }
+  .logo-central {
+    height: 50px;
+  }
+
+  /* Escondemos a navegação do desktop */
+  header nav {
+    display: none;
+  }
+
+  .hamburger-button {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--cor-amarelo-destaque);
+    font-size: 2.5rem; /* Um pouco maior para facilitar o toque */
+    cursor: pointer;
+    z-index: 1001; /* Garante que o botão fique acima do menu */
+  }
+
+  /* AQUI A CORREÇÃO PRINCIPAL DO MENU SOBREPONDO */
+  /* O menu só é exibido quando a classe .nav-active é aplicada */
+  nav.nav-active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--cor-indigo-escuro); /* Fundo do menu */
+    backdrop-filter: blur(5px); /* Efeito de desfoque (moderno) */
+    padding: 2rem;
+    gap: 1.5rem;
+    z-index: 1000;
+  }
+
+  nav.nav-active a {
+    font-size: 1.8rem;
+    text-align: center;
+    width: 100%;
+  }
+}

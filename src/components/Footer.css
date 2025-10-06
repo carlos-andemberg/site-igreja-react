@@ -1,0 +1,27 @@
+/* src/components/Footer.css */
+.site-footer {
+  background-color: var(--cor-indigo-escuro); /* <<-- Usando o índigo da paleta! */
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Por padrão (no desktop), a nossa quebra de linha customizada fica invisível. */
+.mobile-only-break {
+  display: none;
+}
+
+/* Quando a tela for menor que 768px (tablets e celulares)... */
+@media (max-width: 768px) {
+  /* ...a quebra de linha aparece! */
+  .mobile-only-break {
+    display: block;
+  }
+
+  /* Opcional, mas recomendado: Adicionar um pouco de espaço nas laterais
+     para o texto não colar nas bordas do celular. */
+  .site-footer p {
+    padding: 0 1rem;
+  }
+}

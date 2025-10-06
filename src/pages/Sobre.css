@@ -1,0 +1,160 @@
+/* src/pages/Sobre.css */
+
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--cor-fundo-site);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.about-header .intro-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-header-text {
+  flex: 1.5;
+  text-align: left;
+}
+
+.about-header-text h1 {
+  color: var(--cor-indigo-escuro);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-header-text {
+    text-align: center;
+  }
+}
+
+/* --- ESTILOS PARA A NOVA SEÇÃO DE BOAS-VINDAS --- */
+.welcome-message-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  /* Centraliza o bloco e adiciona margem inferior */
+  padding: 0 1rem;
+  /* Garante respiro em telas menores */
+}
+
+.welcome-message-section h2 {
+  color: var(--cor-azul-principal);
+  border-bottom: 2px solid var(--cor-amarelo-destaque);
+  display: inline-block;
+  /* Faz a borda ficar apenas no tamanho do texto */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-message-section p {
+  line-height: 1.8;
+  color: #707070;
+  text-align: left; /* Alinha apenas os parágrafos à esquerda */
+}
+
+/* --- FIM DOS ESTILOS DA NOVA SEÇÃO --- */
+
+
+.pastors-section h2 {
+  text-align: center;
+  color: var(--cor-azul-principal);
+  margin-bottom: 2rem;
+}
+
+.pastors-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pastor-card {
+  text-align: center;
+  flex-basis: 280px;
+}
+
+.pastor-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 4px solid var(--cor-branco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  object-position: center;
+  background-color: #e0e0e0;
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.intro-image {
+  flex: 1;
+  max-width: 500px;
+}
+
+.intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.intro-text {
+  flex: 1.5;
+  line-height: 1.8;
+}
+
+.intro-text h2 {
+  color: var(--cor-azul-principal);
+  border-bottom: 2px solid var(--cor-amarelo-destaque);
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+  }
+}
+
+.board-members {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.board-members h4 {
+  font-size: 18px;
+  color: var(--cor-azul-principal);
+  margin-bottom: 0.5rem;
+}
+
+.board-members ul {
+  margin-left: 24px;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  color: #707070;
+}
+
+.board-members ul strong {
+  color: #505050 !important;
+}
+
+.board-members li {
+  padding: 0.25rem 0;
+}

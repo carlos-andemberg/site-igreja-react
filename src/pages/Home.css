@@ -1,0 +1,316 @@
+/* src/pages/Home.css */
+
+.hero-section {
+    position: relative;
+    /* Necessário para o overlay funcionar */
+    height: 60vh;
+    /* Ocupa 60% da altura da tela */
+    background-image: url('../assets/hero-background.jpg');
+    /* <<-- Coloque o nome da sua imagem aqui! */
+    background-size: cover;
+    background-position: center;
+    color: var(--cor-branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Esta é a camada escura que fica sobre a imagem para dar contraste ao texto */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Preto com 50% de transparência */
+}
+
+.hero-content {
+    position: relative;
+    /* Garante que o conteúdo fique acima do overlay */
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Estilo para as seções futuras da página */
+.outra-secao {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Container para os cartões */
+.info-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* padding: 2rem 0; */
+    /* Adicionamos um respiro para separar da faixa de evento */
+    /* Sobrepor de hero */
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+}
+
+@media (max-width: 768px) {
+  .info-section {
+    margin-top: 2rem;
+  }
+}
+
+/* Estilo individual de cada cartão */
+.info-card {
+    background-color: var(--cor-branco);
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Sombra um pouco mais forte */
+    text-align: center;
+    flex-basis: 320px;
+    /* Largura base de cada cartão */
+    flex-grow: 1;
+    /* Permite que os cartões cresçam se houver espaço */
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-card h3 {
+    color: var(--cor-indigo-escuro);
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    line-height: 1.6;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--cor-azul-principal);
+    /* Usando o azul da paleta */
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.map-link:hover {
+    background-color: var(--cor-indigo-escuro);
+    /* Escurece ao passar o mouse */
+}
+
+/* .event-highlight {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.event-image-container {
+    flex: 1;
+    max-width: 400px;
+}
+
+.event-image-container img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.event-content {
+    flex: 1.5;
+    text-align: left;
+}
+
+.event-content h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: var(--cor-indigo-escuro);
+}
+
+.event-content p {
+    color: var(--cor-texto);
+}
+
+.event-details {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-azul-principal);
+} */
+
+/* Container para a lista de dias */
+.schedule-list {
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+/* Estilo para cada dia da semana */
+.schedule-day {
+    margin-bottom: 1.5rem;
+}
+
+.schedule-day h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--cor-azul-principal);
+    border-bottom: 2px solid var(--cor-amarelo-destaque);
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Remove o espaçamento padrão da lista */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada item da lista (cada culto) */
+.service-item {
+    display: flex;
+    /* ATIVA A MÁGICA! */
+    justify-content: space-between;
+    gap: 10px;
+    /* Alinha o nome e o horário na mesma linha */
+    padding: 0.75rem 0.25rem;
+    border-bottom: 1px solid #eee;
+    /* Linha sutil de separação */
+}
+
+@media (max-width: 424px) {
+    .service-name{
+        font-size: 14px;
+    }
+    .service-time{
+        font-size: 14px;
+    }
+}
+@media (max-width: 392px) {
+    .service-name{
+        font-size: 12px;
+    }
+    .service-time{
+        font-size: 12px;
+    }
+}
+@media (max-width: 360px) {
+    .service-name{
+        font-size: 10px;
+    }
+    .service-time{
+        font-size: 10px;
+    }
+}
+@media (max-width: 328px) {
+    .service-name{
+        font-size: 8px;
+    }
+    .service-time{
+        font-size: 8px;
+    }
+}
+/* Remove a linha do último item de cada dia */
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-name {
+    font-weight: 500;
+    color: #505050;
+    margin-left: 24px;
+}
+
+.service-time {
+    color: #707070;
+}
+
+.pix-info {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    font-family: 'Courier New', Courier, monospace;
+    /* Fonte monoespaçada para a chave */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pix-info span {
+    font-size: 1.1rem;
+}
+
+.copy-button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-amarelo-destaque);
+    color: var(--cor-indigo-escuro);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.copy-button:hover {
+    transform: scale(1.02);
+}
+
+/* Regra para telas de celular */
+/* @media (max-width: 768px) {
+    .event-highlight {
+        flex-direction: column;
+    }
+
+    .event-content,
+    .event-details {
+        text-align: center;
+        justify-content: center;
+    }
+} */
+/* --- Regra para o mapa no Desktop --- */
+
+/* 1. Por padrão (em telas pequenas/mobile), o mapa fica escondido. */
+.desktop-map-container {
+    display: none;
+    flex-grow: 1;
+}
+
+.desktop-map-container iframe {
+    width: 100%;
+    height: 100%;
+    /* Altura do mapa no card */
+    border-radius: 8px;
+}
+
+/* 2. Quando a tela for GRANDE (min-width: 992px), o mapa aparece. */
+@media (min-width: 864px) {
+    .desktop-map-container {
+        display: block;
+        /* Faz o mapa aparecer */
+        margin-top: 1.5rem;
+    }
+}
