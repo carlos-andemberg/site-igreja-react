@@ -11,6 +11,7 @@ function Footer() {
                 {' '} {/* Garante um espaço no desktop quando a quebra de linha está escondida */}
                 Todos os direitos reservados.
             </p>
+            <p>Desenvolvido por <a className="creator-design" target="_blank" href="https:\\carlosandemberg.com.br">Carlos Andemberg</a></p>
         </footer>
     );
 }

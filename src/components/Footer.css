@@ -12,6 +12,11 @@
   display: none;
 }
 
+.creator-design{
+  color: var(--cor-amarelo-destaque);
+  text-decoration: none;
+}
+
 /* Quando a tela for menor que 768px (tablets e celulares)... */
 @media (max-width: 768px) {
   /* ...a quebra de linha aparece! */
