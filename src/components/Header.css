@@ -1,11 +1,12 @@
 /* src/components/Header.css */
 header {
   background-color: var(--cor-indigo-escuro);
-  padding: 0 1.5rem; /* Um pouco menos de padding lateral para mobile */
+  padding: 0 1.5rem;
+  /* Um pouco menos de padding lateral para mobile */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -13,18 +14,37 @@ header {
 }
 
 /* --- Layout de 3 Colunas --- */
-.header-left, .header-right {
+/* .header-left,
+.header-right {
   flex: 1;
-}
+} */
 
 .header-center {
   text-align: center;
 }
 
+.father {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--cor-branco)
+}
+
+.father>.title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.father>.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .header-right {
   display: flex;
   justify-content: flex-end;
-  align-items: center; /* Alinha o menu e o botão */
+  align-items: center;
+  /* Alinha o menu e o botão */
 }
 
 .logo-principal {
@@ -34,9 +54,10 @@ header {
   background-color: var(--cor-branco);
 }
 
-.logo-central {
+.logo-lateral {
   height: 65px;
-  border-radius: 8px;
+  padding: 5px;
+  border-radius: 7px;
 }
 
 header nav {
@@ -73,8 +94,21 @@ header nav a.active {
   .logo-principal {
     height: 50px;
   }
-  .logo-central {
+
+  .father>.title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .father>.subtitle {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .logo-lateral {
     height: 50px;
+    padding: 5px;
+    border-radius: 7px;
   }
 
   /* Escondemos a navegação do desktop */
@@ -87,9 +121,11 @@ header nav a.active {
     background: none;
     border: none;
     color: var(--cor-amarelo-destaque);
-    font-size: 2.5rem; /* Um pouco maior para facilitar o toque */
+    font-size: 2.5rem;
+    /* Um pouco maior para facilitar o toque */
     cursor: pointer;
-    z-index: 1001; /* Garante que o botão fique acima do menu */
+    z-index: 1001;
+    /* Garante que o botão fique acima do menu */
   }
 
   /* AQUI A CORREÇÃO PRINCIPAL DO MENU SOBREPONDO */
@@ -102,8 +138,10 @@ header nav a.active {
     left: 0;
     width: 100%;
     height: calc(100vh - 80px);
-    background-color: var(--cor-indigo-escuro); /* Fundo do menu */
-    backdrop-filter: blur(5px); /* Efeito de desfoque (moderno) */
+    background-color: var(--cor-indigo-escuro);
+    /* Fundo do menu */
+    backdrop-filter: blur(5px);
+    /* Efeito de desfoque (moderno) */
     padding: 2rem;
     gap: 1.5rem;
     z-index: 1000;
@@ -113,5 +151,17 @@ header nav a.active {
     font-size: 1.8rem;
     text-align: center;
     width: 100%;
+  }
+}
+
+@media (max-width: 397px) {
+  .father>.title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .father>.subtitle {
+    font-size: 12px;
+    font-weight: 600;
   }
 }

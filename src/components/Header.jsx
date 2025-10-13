@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import logoPrincipal from '../assets/logo.svg';
-import logoCentral from '../assets/logo-central.png';
+import logoDireita from '../assets/logo-lateral.jpg'
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,8 +21,16 @@ function Header() {
       </div>
 
       <div className="header-center">
+        <Link to="/" className='father' onClick={closeMobileMenu}>
+          <span className='title'>ASSEMBLEIA DE DEUS</span>
+          <span className='subtitle'>MINISTÉRIO MADUREIRA</span>
+          <span className='subtitle'>PIRACICABA</span>
+        </Link>
+      </div>
+
+      <div className="header-center-right">
         <Link to="/" onClick={closeMobileMenu}>
-          <img src={logoCentral} alt="Logo AD Brás Piracicaba Tabuleiro" className="logo-central" />
+          <img src={logoDireita} alt="Logo da Igreja" className="logo-lateral" />
         </Link>
       </div>
 

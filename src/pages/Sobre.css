@@ -2,17 +2,13 @@
 
 .about-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
   background-color: var(--cor-fundo-site);
   padding: 2rem;
   border-radius: 8px;
   margin-bottom: 2rem;
-}
-
-.about-header .intro-image {
-  flex: 1;
-  max-width: 400px;
 }
 
 .about-header-text {
@@ -22,6 +18,7 @@
 
 .about-header-text h1 {
   color: var(--cor-indigo-escuro);
+  text-align: center;
   margin: 0;
 }
 
@@ -39,7 +36,7 @@
 /* --- ESTILOS PARA A NOVA SEÇÃO DE BOAS-VINDAS --- */
 .welcome-message-section {
   text-align: center;
-  max-width: 800px;
+  max-width: 825px;
   margin: 0 auto 3rem auto;
   /* Centraliza o bloco e adiciona margem inferior */
   padding: 0 1rem;

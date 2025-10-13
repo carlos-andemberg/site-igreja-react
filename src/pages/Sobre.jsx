@@ -1,6 +1,5 @@
 // src/pages/Sobre.jsx
 import './Sobre.css';
-import logoSobreImage from '../assets/logo-sobre.jpg';
 import fotoPastorDilmo from '../assets/pastor-dilmo.jpg';
 import fotoPastoraMarisa from '../assets/pastora-marisa.jpg';
 import fotoPastorNilson from '../assets/pastor-nilson.jpg';
@@ -10,9 +9,6 @@ function Sobre() {
     return (
         <div>
             <section className="about-header">
-                <div className="intro-image">
-                    <img src={logoSobreImage} alt="Fachada da Igreja AD Brás Piracicaba Tabuleiro" />
-                </div>
                 <div className="about-header-text">
                     <h1>Quem Somos</h1>
                     <p>Conheça um pouco mais sobre nossa comunidade e nossa fé.</p>
