@@ -97,7 +97,7 @@ function Home() {
                         Tabuleiro do Martins, Maceió - AL, 57061-100
                     </p>
                     <a
-                        href="https://maps.google.com/?cid=17186246363408014434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" /* <<-- ATUALIZE ESTA LINHA */
+                        href="https://maps.app.goo.gl/DSVGYmbWSZtEjXCy9" /* <<-- ATUALIZE ESTA LINHA */
                         target="_blank"
                         rel="noopener noreferrer"
                         className="map-link"
